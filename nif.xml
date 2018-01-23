@@ -2090,9 +2090,7 @@
         <add name="Sphere" type="NiBound" cond="Collision Type == 0" />
         <add name="Box" type="BoxBV" cond="Collision Type == 1" />
         <add name="Capsule" type="CapsuleBV" cond="Collision Type == 2" />
-        <!--<add name="UnionBV" type="UnionBV" cond="Collision Type == 4" />-->
-        <add name="Num BV" type="uint" cond="Collision Type == 4" />
-        <add name="Bounding Volumes" type="BoundingVolume" arr1="Num BV" cond="Collision Type == 4" />
+        <add name="Union" type="UnionBV" cond="Collision Type == 4" />
         <add name="Half Space" type="HalfSpaceBV" cond="Collision Type == 5" />
     </compound>
 
@@ -2674,7 +2672,7 @@
 
     <niobject name="NiBoolInterpolator" abstract="0" inherit="NiKeyBasedInterpolator">
         Uses NiBoolKeys to animate a bool value over time.
-        <add name="Value" type="bool" default="2">Pose value if lacking NiBoolData.</add>
+        <add name="Value" type="byte" default="2">Pose value if lacking NiBoolData.</add>
         <add name="Data" type="Ref" template="NiBoolData" />
     </niobject>
 
