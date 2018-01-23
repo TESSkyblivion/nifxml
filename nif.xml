@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE niftoolsxml>
-<niftoolsxml version="0.9.1.0">
+<niftoolsxml version="0.9.1.2">
     <!--These are the version numbers marked as supported by NifSkope.
         The num argument is the numeric representation created by storing
         each part of the version in a byte.  For example, 4.0.0.2 is
@@ -2090,7 +2090,9 @@
         <add name="Sphere" type="NiBound" cond="Collision Type == 0" />
         <add name="Box" type="BoxBV" cond="Collision Type == 1" />
         <add name="Capsule" type="CapsuleBV" cond="Collision Type == 2" />
-        <add name="Union" type="UnionBV" cond="Collision Type == 4" />
+        <!--<add name="UnionBV" type="UnionBV" cond="Collision Type == 4" />-->
+        <add name="Num BV" type="uint" cond="Collision Type == 4" />
+        <add name="Bounding Volumes" type="BoundingVolume" arr1="Num BV" cond="Collision Type == 4" />
         <add name="Half Space" type="HalfSpaceBV" cond="Collision Type == 5" />
     </compound>
 
